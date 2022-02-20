@@ -20,12 +20,22 @@ jxRequirements:
     enabled: false
     schedule: ""
   cluster:
+    azure:
+      secretStorage:
+        keyVaultName: full-bulldog
+      storage:
+        storageAccountName: jxfullbulldog
+    chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+    environmentGitOwner: SkisocksOrg
     gitKind: github
     gitName: github
     gitServer: https://github.com
     provider: aks
+    registry: fullbulldog.azurecr.io
   environments:
   - key: dev
+    owner: SkisocksOrg
+    repository: jx3-azure-akv-cluster
   - key: staging
   - key: production
   ingress:
@@ -36,8 +46,13 @@ jxRequirements:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: SkisocksBot
   repository: nexus
   secretStorage: azurekeyvault
+  storage:
+  - name: logs
+    url: azblob://logs
   vault: {}
   webhook: lighthouse
 jxRequirementsIngressExternalDNS:
