@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: open-source-archie
+    provider: gitlab
+    repository: retry
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: open-source-archie-retry
+  namespace: jx
+spec:
+  httpCloneURL: https://gitlab.com/open-source-archie/retry.git
+  org: open-source-archie
+  provider: https://gitlab.com
+  providerKind: gitlab
+  providerName: github
+  repo: retry
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://gitlab.com/open-source-archie/retry

@@ -10,6 +10,12 @@ spec:
     repositories:
     - name: test-http
     scheduler: in-repo
+  - owner: open-source-archie
+    provider: https://gitlab.com
+    providerKind: gitlab
+    repositories:
+    - name: retry
+    scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
     kind: failureOrNextSuccess
