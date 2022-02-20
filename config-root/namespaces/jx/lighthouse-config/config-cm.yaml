@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        SkisocksOrg/http-server: true
         SkisocksOrg/jx3-azure-akv-cluster: true
         SkisocksOrg/test-http: true
         open-source-archie/retry: true
@@ -21,6 +22,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        SkisocksOrg/http-server: merge
         SkisocksOrg/jx3-azure-akv-cluster: merge
         SkisocksOrg/test-http: merge
         open-source-archie/retry: merge
@@ -36,6 +38,7 @@ data:
         repos:
         - SkisocksOrg/jx3-azure-akv-cluster
         - open-source-archie/retry
+        - SkisocksOrg/http-server
         - SkisocksOrg/test-http
       - labels:
         - updatebot
@@ -48,6 +51,7 @@ data:
         repos:
         - SkisocksOrg/jx3-azure-akv-cluster
         - open-source-archie/retry
+        - SkisocksOrg/http-server
         - SkisocksOrg/test-http
       target_url: http://lighthouse-jx.20.70.248.13.nip.io/merge/status
 kind: ConfigMap

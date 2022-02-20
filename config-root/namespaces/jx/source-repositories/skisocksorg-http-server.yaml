@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: SkisocksOrg
+    provider: github
+    repository: http-server
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: skisocksorg-http-server
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/SkisocksOrg/http-server.git
+  org: SkisocksOrg
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: http-server
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/SkisocksOrg/http-server

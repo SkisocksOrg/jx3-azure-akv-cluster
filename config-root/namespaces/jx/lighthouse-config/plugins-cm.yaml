@@ -12,6 +12,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - SkisocksOrg/http-server
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - SkisocksOrg/test-http
       require_self_approval: true
     cat: {}
@@ -24,6 +28,11 @@ data:
         env/prow/plugins.yaml:
           name: plugins
     external_plugins:
+      SkisocksOrg/http-server:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       SkisocksOrg/jx3-azure-akv-cluster:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -44,6 +53,22 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      SkisocksOrg/http-server:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       SkisocksOrg/jx3-azure-akv-cluster:
       - config-updater
       - approve
@@ -107,6 +132,9 @@ data:
       trusted_org: todo
     - repos:
       - open-source-archie/retry
+      trusted_org: todo
+    - repos:
+      - SkisocksOrg/http-server
       trusted_org: todo
     - repos:
       - SkisocksOrg/test-http
