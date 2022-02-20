@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - SkisocksOrg/jx3-azure-akv-cluster
-      target_url: http://lighthouse-jx./merge/status
+      target_url: http://lighthouse-jx.20.70.248.13.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null
