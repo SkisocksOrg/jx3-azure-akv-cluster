@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: SkisocksOrg
+    provider: github
+    repository: test-http
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: skisocksorg-test-http
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/SkisocksOrg/test-http.git
+  org: SkisocksOrg
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: test-http
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/SkisocksOrg/test-http
